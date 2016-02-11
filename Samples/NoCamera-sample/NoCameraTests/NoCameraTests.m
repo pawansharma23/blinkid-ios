@@ -100,6 +100,22 @@
     [self waitForExpectationsWithTimeout:currentExpectations.count*1.0 handler:nil];
 }
 
+- (void)testMyKad {
+    PPCoordinator *coordinator = [self coordinatorWithError:nil];
+    [coordinator.currentSettings.scanSettings addRecognizerSettings:[[PPMyKadRecognizerSettings alloc] init]];
+    [coordinator applySettings];
+
+    NSArray *array = [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:@"jpg" inDirectory:@"Images/MyKad"];
+    for (int i = 0; i < array.count; i++) {
+        [currentExpectations addObject:[self expectationWithDescription:[@"MyKad" stringByAppendingString:[NSString stringWithFormat:@"%d",i]]]];
+    }
+    for (NSString *path in array) {
+        UIImage *myKadImg = [[UIImage alloc] initWithContentsOfFile:path];
+        [coordinator processImage:myKadImg scanningRegion:CGRectMake(0.0, 0.0, 1.0, 1.0) delegate:self];
+    }
+    [self waitForExpectationsWithTimeout:currentExpectations.count*1.0 handler:nil];
+}
+
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController didFindError:(NSError *)error {
 }
 
