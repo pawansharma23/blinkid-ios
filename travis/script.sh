@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+scan -p Samples/NoCamera-sample/NoCamera-sample.xcodeproj/
+
 xctool -project Samples/BlinkID-sample/BlinkID-sample.xcodeproj \
 	-scheme BlinkID-sample \
 	-configuration Debug \

@@ -22,7 +22,19 @@
 		18ADB7F81BEB396F00AB0624 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ADB7F71BEB396F00AB0624 /* libc++.tbd */; };
 		18D0E8541C39A0DA00E47EF5 /* MicroBlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8521C39A0DA00E47EF5 /* MicroBlink.framework */; };
 		18D0E8571C39A0E800E47EF5 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D0E8561C39A0E800E47EF5 /* libiconv.tbd */; };
+		3112CD491C6A31500074AD9D /* NoCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3112CD481C6A31500074AD9D /* NoCameraTests.m */; };
+		3112CD511C6A33A50074AD9D /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 3112CD501C6A33A50074AD9D /* Images */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3112CD4B1C6A31500074AD9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1807C11E1AEF789700469E61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1807C1251AEF789700469E61;
+			remoteInfo = "NoCamera-sample";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1807C1261AEF789700469E61 /* NoCamera-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NoCamera-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +56,10 @@
 		18ADB7F71BEB396F00AB0624 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		18D0E8521C39A0DA00E47EF5 /* MicroBlink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MicroBlink.framework; path = ../../MicroBlink.framework; sourceTree = "<group>"; };
 		18D0E8561C39A0E800E47EF5 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		3112CD461C6A31500074AD9D /* NoCameraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoCameraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3112CD481C6A31500074AD9D /* NoCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoCameraTests.m; sourceTree = "<group>"; };
+		3112CD4A1C6A31500074AD9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3112CD501C6A33A50074AD9D /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3112CD431C6A31500074AD9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1807C1281AEF789700469E61 /* NoCamera-sample */,
+				3112CD471C6A31500074AD9D /* NoCameraTests */,
 				1807C14F1AEF791900469E61 /* Frameworks */,
 				1807C1271AEF789700469E61 /* Products */,
 			);
@@ -78,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				1807C1261AEF789700469E61 /* NoCamera-sample.app */,
+				3112CD461C6A31500074AD9D /* NoCameraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +147,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3112CD471C6A31500074AD9D /* NoCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				3112CD501C6A33A50074AD9D /* Images */,
+				3112CD481C6A31500074AD9D /* NoCameraTests.m */,
+				3112CD4A1C6A31500074AD9D /* Info.plist */,
+			);
+			path = NoCameraTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +177,24 @@
 			productReference = 1807C1261AEF789700469E61 /* NoCamera-sample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3112CD451C6A31500074AD9D /* NoCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3112CD4F1C6A31500074AD9D /* Build configuration list for PBXNativeTarget "NoCameraTests" */;
+			buildPhases = (
+				3112CD421C6A31500074AD9D /* Sources */,
+				3112CD431C6A31500074AD9D /* Frameworks */,
+				3112CD441C6A31500074AD9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3112CD4C1C6A31500074AD9D /* PBXTargetDependency */,
+			);
+			name = NoCameraTests;
+			productName = NoCameraTests;
+			productReference = 3112CD461C6A31500074AD9D /* NoCameraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +206,10 @@
 				TargetAttributes = {
 					1807C1251AEF789700469E61 = {
 						CreatedOnToolsVersion = 6.3;
+					};
+					3112CD451C6A31500074AD9D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 1807C1251AEF789700469E61;
 					};
 				};
 			};
@@ -170,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				1807C1251AEF789700469E61 /* NoCamera-sample */,
+				3112CD451C6A31500074AD9D /* NoCameraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +244,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3112CD441C6A31500074AD9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3112CD511C6A33A50074AD9D /* Images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,7 +265,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3112CD421C6A31500074AD9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3112CD491C6A31500074AD9D /* NoCameraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3112CD4C1C6A31500074AD9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1807C1251AEF789700469E61 /* NoCamera-sample */;
+			targetProxy = 3112CD4B1C6A31500074AD9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1807C1331AEF789700469E61 /* Main.storyboard */ = {
@@ -328,6 +410,33 @@
 			};
 			name = Release;
 		};
+		3112CD4D1C6A31500074AD9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = NoCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.NoCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoCamera-sample.app/NoCamera-sample";
+			};
+			name = Debug;
+		};
+		3112CD4E1C6A31500074AD9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = NoCameraTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.microblink.NoCameraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoCamera-sample.app/NoCamera-sample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +457,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3112CD4F1C6A31500074AD9D /* Build configuration list for PBXNativeTarget "NoCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3112CD4D1C6A31500074AD9D /* Debug */,
+				3112CD4E1C6A31500074AD9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
