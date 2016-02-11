@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
 
-xctool -scheme NoCamera-sample \
--project Samples/NoCamera-sample/NoCamera-sample.xcodeproj \
--sdk iphonesimulator \
-CODE_SIGN_IDENTITY=""\
-CODE_SIGNING_REQUIRED=NO \
-build test
+xctool -project Samples/NoCamera-sample/NoCamera-sample.xcodeproj \
+    -scheme NoCamera-sample \
+    -configuration Debug \
+    -sdk iphonesimulator \
+    ONLY_ACTIVE_ARCH=NO \
+    build test
 
 xctool -project Samples/BlinkID-sample/BlinkID-sample.xcodeproj \
 	-scheme BlinkID-sample \

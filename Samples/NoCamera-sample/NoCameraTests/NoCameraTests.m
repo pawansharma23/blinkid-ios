@@ -32,8 +32,6 @@
 
     /** 4. Initialize the Scanning Coordinator object */
 
-//    settings.metadataSettings.debugMetadata.debugOcrInputFrame = YES;
-//    settings.metadataSettings.successfulFrame = YES;
     settings.metadataSettings.debugMetadata.debugDetectionFrame = YES;
     PPCoordinator *coordinator = [[PPCoordinator alloc] initWithSettings:settings];
     
@@ -123,7 +121,7 @@
     if (results.count == 0 || results == nil) {
         return;
     }
-    for (PPRecognizerResult *result in results) {
+    for (int i = 0; i < results.count; i++) {
         [[currentExpectations objectAtIndex:currentExpectationIndex] fulfill];
     }
     currentExpectationIndex++;
